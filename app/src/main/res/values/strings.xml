@@ -2,4 +2,6 @@
     <string name="app_name">Mobile Based Tourist Spot and Shop Navigator</string>
 
     <string name="map_box_access_token">pk.eyJ1IjoiY2VkaWVwZXJlejEyIiwiYSI6ImNrM2lnN202eDA3eHAzZHM3a2kyOTRmbXAifQ.aycguHgjg4saApLr140G8w</string>
+
+    <string name="email_text">Email</string>
 </resources>
