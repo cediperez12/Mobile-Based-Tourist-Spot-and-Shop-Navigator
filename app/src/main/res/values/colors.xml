@@ -5,4 +5,7 @@
     <color name="colorAccent">#7c43bd</color>
 
     <color name="null_photo">#2A000000</color>
+    <color name="success">#22bb33</color>
+    <color name="error">#bb2124</color>
+    <color name="warning">#f0ad4e</color>
 </resources>

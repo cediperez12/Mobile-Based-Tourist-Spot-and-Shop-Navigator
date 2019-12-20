@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="256dp"
-        android:layout_height="256dp"
+        android:layout_width="128dp"
+        android:layout_height="128dp"
         android:layout_marginTop="72dp"
         android:contentDescription="TODO"
         app:layout_constraintEnd_toEndOf="parent"
@@ -19,13 +19,15 @@
         app:srcCompat="@color/null_photo" />
 
     <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayout_email_text"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="128dp"
+        android:layout_marginTop="72dp"
         android:layout_marginEnd="16dp"
         android:focusedByDefault="true"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        app:errorEnabled="true"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView">
@@ -33,7 +35,71 @@
         <com.google.android.material.textfield.TextInputEditText
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:hint="@string/email_text"/>
+            android:letterSpacing="0.3"
+            android:fontFamily="@font/roboto"
+            android:hint="@string/email_text"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/small_text" />
     </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textinputlayout_password"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:errorEnabled="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlayout_email_text"
+        app:passwordToggleEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password_text"
+            android:textSize="@dimen/small_text" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="8dp"
+        android:text="@string/login_text"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/small_text"
+        android:textStyle="bold"
+        android:onClick="onClickLogin"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textinputlayout_password" />
+
+    <Button
+        android:id="@+id/sign_up_button"
+        style="@style/Widget.AppCompat.Button.Borderless"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/signup_text"
+        android:textAllCaps="false"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="@dimen/small_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_login" />
+
+    <ImageView
+        android:id="@+id/sponsor_logo"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sign_up_button"
+        app:srcCompat="@color/null_photo" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

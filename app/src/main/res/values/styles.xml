@@ -6,6 +6,12 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+
+        <item name="android:fontFamily">@font/roboto</item>
+    </style>
+
+    <style name="button" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">62dp</item>
     </style>
 
 </resources>
