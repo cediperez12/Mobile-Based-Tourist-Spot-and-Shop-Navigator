@@ -5,6 +5,12 @@
 
     <string name="email_text">Email</string>
     <string name="password_text">Password</string>
+    <string name="confirm_password">Confirm Password</string>
     <string name="login_text">Login</string>
     <string name="signup_text">Sign Up</string>
+    <string name="personal_information">Personal Information</string>
+    <string name="account_information">Account Information</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="i_have_an_account">I have an account</string>
 </resources>
