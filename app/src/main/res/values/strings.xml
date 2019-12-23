@@ -28,4 +28,6 @@
     <string name="sample_email">lee_ji_eun@gmail.com</string>
     <string name="sample_count">1.2K</string>
     <string name="visited_places">Visited Places</string>
+    <string name="sample_time_place">12/12/1999 at Rizal Park</string>
+    <string name="sample_caption">Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
 </resources>

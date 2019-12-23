@@ -135,27 +135,27 @@
             android:textColor="@android:color/black"
             android:textSize="@dimen/medium_text"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/post_profile_image"
-            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@id/post_profile_image"
+            android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"/>
 
         <TextView
             android:id="@+id/post_profile_time_place"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="12/12/1999 at Rizal Park"
+            android:text="@string/sample_time_place"
             android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/small_text"
             android:textStyle="bold"
-            android:layout_toRightOf="@id/post_profile_image"
-            android:layout_marginLeft="8dp"
+            android:layout_toEndOf="@id/post_profile_image"
+            android:layout_marginStart="8dp"
             android:layout_below="@id/post_profile_user_name"/>
 
         <TextView
             android:id="@+id/post_caption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+            android:text="@string/sample_caption"
             android:textSize="@dimen/small_text"
             android:layout_below="@id/post_profile_image"
             android:layout_marginTop="8dp"/>
@@ -166,7 +166,8 @@
             android:scaleType="centerCrop"
             android:layout_marginTop="8dp"
             android:src="@drawable/sample_post_photo"
-            android:layout_below="@id/post_caption"/>
+            android:layout_below="@id/post_caption"
+            android:contentDescription="@string/todo" />
 
     </RelativeLayout>
 
