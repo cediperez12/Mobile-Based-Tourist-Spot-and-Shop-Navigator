@@ -4,6 +4,9 @@
     <color name="colorPrimaryDark">#12005E</color>
     <color name="colorAccent">#7C43BD</color>
 
+    <color name="colorSecondary">#d50000</color>
+    <color name="colorSecondaryDark">#9b0000</color>
+
     <color name="null_photo">#2A000000</color>
     <color name="success">#22bb33</color>
     <color name="error">#bb2124</color>

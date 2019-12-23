@@ -13,5 +13,4 @@
     <style name="button" parent="Widget.MaterialComponents.Button">
         <item name="cornerRadius">62dp</item>
     </style>
-
 </resources>

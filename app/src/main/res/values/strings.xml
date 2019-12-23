@@ -13,4 +13,19 @@
     <string name="first_name">First Name</string>
     <string name="last_name">Last Name</string>
     <string name="i_have_an_account">I have an account</string>
+    <string name="dashboard">Dashboard</string>
+    <string name="user_profile">User Profile</string>
+    <string name="notification">Notification</string>
+    <string name="post">Post</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="search_for_places">Search for Places</string>
+    <string name="todo">TODO</string>
+    <string name="spots_near_you">Spots near you</string>
+    <string name="sample_name">Lee Ji Eun</string>
+    <string name="sample_email">lee_ji_eun@gmail.com</string>
+    <string name="sample_count">1.2K</string>
+    <string name="visited_places">Visited Places</string>
 </resources>
