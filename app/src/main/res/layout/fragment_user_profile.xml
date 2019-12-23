@@ -69,7 +69,7 @@
             android:layout_marginTop="8dp"
             android:text="@string/sample_count"
             android:textColor="@android:color/black"
-            android:textSize="@dimen/medium_text"
+            android:textSize="@dimen/large_text"
             android:textStyle="bold" />
 
         <TextView
@@ -110,14 +110,64 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="4dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="16dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/post_profile_image"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:src="@drawable/sample_photo"
+            />
+
+        <TextView
+            android:id="@+id/post_profile_user_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/sample_name"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/medium_text"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/post_profile_image"
+            android:layout_marginLeft="8dp"
+            android:layout_marginTop="4dp"/>
+
+        <TextView
+            android:id="@+id/post_profile_time_place"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="12/12/1999 at Rizal Park"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="@dimen/small_text"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/post_profile_image"
+            android:layout_marginLeft="8dp"
+            android:layout_below="@id/post_profile_user_name"/>
+
+        <TextView
+            android:id="@+id/post_caption"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Lorem Ipsum Lorem Ipsum Lorem Ipsum"
+            android:textSize="@dimen/small_text"
+            android:layout_below="@id/post_profile_image"
+            android:layout_marginTop="8dp"/>
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="128dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="8dp"
+            android:src="@drawable/sample_post_photo"
+            android:layout_below="@id/post_caption"/>
+
+    </RelativeLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
