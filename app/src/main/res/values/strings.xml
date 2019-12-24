@@ -3,6 +3,18 @@
 
     <string name="map_box_access_token">pk.eyJ1IjoiY2VkaWVwZXJlejEyIiwiYSI6ImNrM2lnN202eDA3eHAzZHM3a2kyOTRmbXAifQ.aycguHgjg4saApLr140G8w</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search">Search</string>
+    <string name="search_for_places">Search for Places</string>
+    <string name="todo">TODO</string>
+    <string name="spots_near_you">Spots near you</string>
+    <string name="sample_name">Lee Ji Eun</string>
+    <string name="sample_email">lee_ji_eun@gmail.com</string>
+    <string name="sample_count">1.2K</string>
+    <string name="visited_places">Visited Places</string>
+    <string name="sample_time_place">12/12/1999 at Rizal Park</string>
+    <string name="sample_caption">Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
     <string name="email_text">Email</string>
     <string name="password_text">Password</string>
     <string name="confirm_password">Confirm Password</string>
@@ -17,17 +29,8 @@
     <string name="user_profile">User Profile</string>
     <string name="notification">Notification</string>
     <string name="post">Post</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="search">Search</string>
-    <string name="search_for_places">Search for Places</string>
-    <string name="todo">TODO</string>
-    <string name="spots_near_you">Spots near you</string>
-    <string name="sample_name">Lee Ji Eun</string>
-    <string name="sample_email">lee_ji_eun@gmail.com</string>
-    <string name="sample_count">1.2K</string>
-    <string name="visited_places">Visited Places</string>
-    <string name="sample_time_place">12/12/1999 at Rizal Park</string>
-    <string name="sample_caption">Lorem Ipsum Lorem Ipsum Lorem Ipsum</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="change_profile_photo">Change Profile Photo</string>
+    <string name="sample_first_name">Ji Eun</string>
+    <string name="sample_last_name">Lee</string>
 </resources>

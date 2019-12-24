@@ -20,7 +20,8 @@
             android:id="@+id/user_fragment_civ_profile_photo"
             android:layout_width="96dp"
             android:layout_height="96dp"
-            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
             android:src="@drawable/sample_photo"
             app:civ_border_color="@android:color/white"
             app:civ_border_width="2dp" />
@@ -48,6 +49,24 @@
             android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/small_text"
             android:textStyle="bold" />
+
+        <com.google.android.material.button.MaterialButton
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/user_fragment_txtv_email"
+            android:layout_marginTop="8dp"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:layout_centerHorizontal="true"
+            android:text="@string/edit_profile"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/small_text"
+            android:textAppearance="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            app:cornerRadius="8dp"
+            app:strokeColor="@android:color/white"
+            app:strokeWidth="2dp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -56,6 +75,7 @@
         android:layout_height="wrap_content"
         android:padding="8dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
@@ -155,12 +175,14 @@
             android:id="@+id/post_caption"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/sample_caption"
-            android:textSize="@dimen/small_text"
             android:layout_below="@id/post_profile_image"
-            android:layout_marginTop="8dp"/>
+            android:layout_marginTop="8dp"
+            android:text="@string/sample_caption"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/small_text" />
 
         <ImageView
+            android:id="@+id/post_Image"
             android:layout_width="match_parent"
             android:layout_height="128dp"
             android:scaleType="centerCrop"
@@ -168,6 +190,15 @@
             android:src="@drawable/sample_post_photo"
             android:layout_below="@id/post_caption"
             android:contentDescription="@string/todo" />
+
+        <view
+            android:id="@+id/view2"
+            class="androidx.constraintlayout.widget.ConstraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/darker_gray"
+            android:layout_below="@id/post_Image"/>
 
     </RelativeLayout>
 
