@@ -10,7 +10,7 @@
         android:id="@+id/relativeLayout"
         android:layout_width="0dp"
         android:layout_height="256dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -56,8 +56,6 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/user_fragment_txtv_email"
             android:layout_marginTop="8dp"
-            android:paddingStart="16dp"
-            android:paddingEnd="16dp"
             android:layout_centerHorizontal="true"
             android:text="@string/edit_profile"
             android:textAllCaps="false"
@@ -66,7 +64,7 @@
             android:textAppearance="@style/Widget.MaterialComponents.Button.OutlinedButton"
             app:cornerRadius="8dp"
             app:strokeColor="@android:color/white"
-            app:strokeWidth="2dp" />
+            app:strokeWidth="1dp" />
     </RelativeLayout>
 
     <RelativeLayout
@@ -74,6 +72,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:padding="8dp"
+        android:background="@color/colorPrimary"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -88,7 +87,7 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="8dp"
             android:text="@string/sample_count"
-            android:textColor="@android:color/black"
+            android:textColor="@android:color/white"
             android:textSize="@dimen/large_text"
             android:textStyle="bold" />
 
@@ -109,8 +108,7 @@
         android:id="@+id/view"
         class="androidx.constraintlayout.widget.ConstraintLayout"
         android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginTop="4dp"
+        android:layout_height="2dp"
         android:background="@android:color/darker_gray"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -154,7 +152,6 @@
             android:text="@string/sample_name"
             android:textColor="@android:color/black"
             android:textSize="@dimen/medium_text"
-            android:textStyle="bold"
             android:layout_toEndOf="@id/post_profile_image"
             android:layout_marginStart="8dp"
             android:layout_marginTop="4dp"/>
@@ -166,7 +163,6 @@
             android:text="@string/sample_time_place"
             android:textColor="@android:color/darker_gray"
             android:textSize="@dimen/small_text"
-            android:textStyle="bold"
             android:layout_toEndOf="@id/post_profile_image"
             android:layout_marginStart="8dp"
             android:layout_below="@id/post_profile_user_name"/>

@@ -14,7 +14,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="@color/colorPrimary"
+        app:cardBackgroundColor="@color/colorPrimaryDark"
         app:cardCornerRadius="8dp"
         app:cardElevation="4dp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -61,7 +61,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="16dp"
-        app:cardBackgroundColor="@color/colorSecondary"
+        app:cardBackgroundColor="@color/colorPrimary"
         app:cardCornerRadius="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -77,38 +77,82 @@
                 android:layout_height="24dp"
                 android:src="@drawable/ic_location_on_black_24dp"
                 android:tint="@android:color/white"
-                android:layout_marginLeft="16dp"
+                android:layout_marginStart="16dp"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentStart="true"
-                android:layout_marginTop="8dp"/>
+                android:layout_marginTop="8dp"
+                android:contentDescription="@string/todo" />
 
             <TextView
                 android:id="@+id/textView4"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toRightOf="@id/imageView2"
+                android:layout_toEndOf="@id/imageView2"
                 android:layout_alignParentTop="true"
                 android:layout_alignParentEnd="true"
                 android:layout_marginTop="8dp"
-                android:layout_marginLeft="4dp"
+                android:layout_marginStart="4dp"
                 android:text="@string/spots_near_you"
                 android:textColor="@android:color/white"
-                android:textSize="@dimen/small_text"
+                android:textSize="@dimen/medium_text"
                 android:textStyle="bold" />
 
             <androidx.recyclerview.widget.RecyclerView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:visibility="invisible"
                 android:layout_below="@id/textView4"
                 android:layout_marginStart="32dp"
                 android:layout_marginTop="16dp"
                 android:layout_marginEnd="32dp"
                 android:layout_marginBottom="16dp" />
 
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/textView4"
+                android:layout_marginStart="32dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="32dp"
+                android:layout_marginBottom="16dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/near_spot_list_icon"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:layout_marginTop="4dp"
+                    android:src="@drawable/ic_location_city_black_24dp"
+                    />
+
+                <TextView
+                    android:id="@+id/near_spot_main_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/medium_text"
+                    android:text="@string/bahay_ni_cedie"
+                    android:textColor="@android:color/white"
+                    android:layout_marginStart="16dp"
+                    android:layout_toEndOf="@id/near_spot_list_icon"/>
+
+                <TextView
+                    android:id="@+id/near_spot_sub_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/small_text"
+                    android:text="@string/obando_bulacan"
+                    android:textColor="@android:color/darker_gray"
+                    android:layout_marginStart="16dp"
+                    android:layout_below="@+id/near_spot_main_text"
+                    android:layout_toEndOf="@id/near_spot_list_icon"/>
+
+
+            </RelativeLayout>
+
             <ProgressBar
                 android:layout_width="48dp"
                 android:layout_height="48dp"
                 android:layout_centerInParent="true"
+                android:visibility="visible"
                 android:indeterminate="true"/>
         </RelativeLayout>
 

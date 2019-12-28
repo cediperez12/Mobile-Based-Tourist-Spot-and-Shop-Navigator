@@ -45,7 +45,9 @@ public class Login extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        loginTask.cancel(true);
+        if(loginTask != null){
+            loginTask.cancel(true);
+        }
     }
 
     private void init(){
@@ -131,7 +133,9 @@ public class Login extends AppCompatActivity {
 
     public void onClickRegister(View view){
         try{
-
+            Intent intent = new Intent(getApplicationContext(),Register.class);
+            startActivity(intent);
+            finish();
         }catch (Exception ex){
             ex.printStackTrace();
         }
