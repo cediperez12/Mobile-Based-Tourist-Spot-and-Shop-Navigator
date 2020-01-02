@@ -374,9 +374,10 @@ public class Register extends AppCompatActivity {
                     final ImageInformation newImageInfo = new ImageInformation(newUser.getUid(),new Date().getTime(),null);
                     final String imageKey = databaseImages.push().getKey();
 
+                    final String photoLink = "images/" + imageKey + ".png";
+
                     progressDialog.setMessage("Uploading your profile picture...");
 
-                    final String photoLink = "images/" + newUser.getUid() + "/" + imageKey + ".png";
                     UploadTask uploadTask = storageReference.child(photoLink).putFile(profilePhoto);
 
                     uploadTask.addOnProgressListener(new OnProgressListener<UploadTask.TaskSnapshot>() {

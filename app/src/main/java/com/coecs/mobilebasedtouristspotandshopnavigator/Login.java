@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -12,8 +13,10 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputLayout;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
@@ -157,9 +160,17 @@ public class Login extends AppCompatActivity {
         private String email;
         private String password;
 
+        private ProgressDialog progressDialog;
+
         public LoginTask(String email,String password){
             this.email = email;
             this.password = password;
+
+            progressDialog = new ProgressDialog(Login.this);
+            progressDialog.setIndeterminate(true);
+            progressDialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+            progressDialog.setCancelable(false);
+            progressDialog.setMessage("Loading...");
         }
 
         @Override
@@ -169,6 +180,7 @@ public class Login extends AppCompatActivity {
             /*
             UI thread changes here. Before the Thread runs.
              */
+            progressDialog.show();
         }
 
         @Override
@@ -189,9 +201,12 @@ public class Login extends AppCompatActivity {
                         startActivity(intent);
                         finish();
                     }
+                }).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+                    @Override
+                    public void onComplete(@NonNull Task<AuthResult> task) {
+                        progressDialog.dismiss();
+                    }
                 });
-
-                Thread.sleep(2000);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
