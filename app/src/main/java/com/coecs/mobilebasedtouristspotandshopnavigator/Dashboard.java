@@ -1,6 +1,9 @@
 package com.coecs.mobilebasedtouristspotandshopnavigator;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentManager;
+import androidx.fragment.app.FragmentPagerAdapter;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -19,6 +22,9 @@ public class Dashboard extends AppCompatActivity {
     private FirebaseUser currentUser;
 
     private DatabaseReference databaseReference;
+
+    private DashboardFragment dashboardFragment;
+    private UserProfileFragment userProfileFragment;
 
 
     @Override
@@ -50,5 +56,34 @@ public class Dashboard extends AppCompatActivity {
         intent.setClass(getApplicationContext(), Login.class);
         startActivity(intent);
         finish();
+    }
+
+    private class ViewPagerAdapter extends FragmentPagerAdapter{
+
+        public ViewPagerAdapter(FragmentManager fm) {
+            super(fm);
+        }
+
+        @Override
+        public Fragment getItem(int position) {
+            switch (position){
+                case 2:
+                    return new UserProfileFragment();
+
+                case 1:
+
+
+                case 0:
+                    return new DashboardFragment();
+
+            }
+
+            return null;
+        }
+
+        @Override
+        public int getCount() {
+            return 0;
+        }
     }
 }

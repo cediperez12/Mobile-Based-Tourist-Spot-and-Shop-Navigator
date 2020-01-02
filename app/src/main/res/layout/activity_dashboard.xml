@@ -21,13 +21,13 @@
         android:id="@+id/mainview_viewpager"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintBottom_toTopOf="@+id/mainview_bottomNav"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainview_toolbar" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNav"
+        android:id="@+id/mainview_bottomNav"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorSecondary"
