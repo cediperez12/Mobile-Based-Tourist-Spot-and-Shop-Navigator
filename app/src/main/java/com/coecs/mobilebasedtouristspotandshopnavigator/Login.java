@@ -197,7 +197,7 @@ public class Login extends AppCompatActivity {
                     @Override
                     public void onSuccess(AuthResult authResult) {
                         Intent intent = new Intent();
-                        intent.setClass(getApplicationContext(),Dashboard.class);
+                        intent.setClass(getApplicationContext(),Dashboard_Nav_Drawer.class);
                         startActivity(intent);
                         finish();
                     }

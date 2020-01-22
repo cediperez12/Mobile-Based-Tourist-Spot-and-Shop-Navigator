@@ -15,7 +15,6 @@ import android.view.ViewGroup;
  */
 public class DashboardFragment extends Fragment {
 
-
     public DashboardFragment() {
         // Required empty public constructor
     }

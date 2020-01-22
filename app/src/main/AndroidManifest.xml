@@ -15,7 +15,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".UpdateProfile"></activity>
+        <activity
+            android:name=".Dashboard_Nav_Drawer"
+            android:label="@string/title_activity_dashboard__nav__drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".UpdateProfile" />
         <activity android:name=".Dashboard" />
         <activity android:name=".Register" />
         <activity android:name=".Login" />
@@ -26,8 +30,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
-            android:theme="@style/Base.Theme.AppCompat"/>
+        <activity
+            android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat" />
 
         <meta-data
             android:name="preloaded_fonts"

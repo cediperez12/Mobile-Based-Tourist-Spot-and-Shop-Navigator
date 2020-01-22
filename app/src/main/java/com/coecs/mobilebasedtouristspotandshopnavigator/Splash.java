@@ -48,7 +48,7 @@ public class Splash extends AppCompatActivity {
 
     private void toDashboard(){
         intent = new Intent();
-        intent.setClass(getApplicationContext(),Dashboard.class);
+        intent.setClass(getApplicationContext(),Dashboard_Nav_Drawer.class);
         startActivity(intent);
         finish();
     }

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+import androidx.fragment.app.FragmentTransaction;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -13,6 +14,11 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.mapbox.mapboxsdk.Mapbox;
+import com.mapbox.mapboxsdk.camera.CameraPosition;
+import com.mapbox.mapboxsdk.geometry.LatLng;
+import com.mapbox.mapboxsdk.maps.MapboxMapOptions;
+import com.mapbox.mapboxsdk.maps.SupportMapFragment;
 
 public class Dashboard extends AppCompatActivity {
 
@@ -25,7 +31,6 @@ public class Dashboard extends AppCompatActivity {
 
     private DashboardFragment dashboardFragment;
     private UserProfileFragment userProfileFragment;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,32 +63,4 @@ public class Dashboard extends AppCompatActivity {
         finish();
     }
 
-    private class ViewPagerAdapter extends FragmentPagerAdapter{
-
-        public ViewPagerAdapter(FragmentManager fm) {
-            super(fm);
-        }
-
-        @Override
-        public Fragment getItem(int position) {
-            switch (position){
-                case 2:
-                    return new UserProfileFragment();
-
-                case 1:
-
-
-                case 0:
-                    return new DashboardFragment();
-
-            }
-
-            return null;
-        }
-
-        @Override
-        public int getCount() {
-            return 0;
-        }
-    }
 }
